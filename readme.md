@@ -21,3 +21,10 @@ Instalasi
 3. Buka PHPMyAdmin dan buat database baru bernama school
 4. Impor school.sql ke dalam basis data Anda
 5. Pastikan konfigurasi database Anda di /application/config/databases.php diketik dengan benar.
+
+************
+Login Page Jika Menggunakan Localhost
+************
+* http://localhost/web_sd/administrator
+* user : admin
+* pass : admin
