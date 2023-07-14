@@ -19,8 +19,7 @@
     <link href="<?php echo base_url() . 'assets/lib/bootstrap/css/bootstrap.min.css' ?>" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="<?php echo base_url() . 'assets/lib/font-awesome/css/font-awesome.min.css' ?>" rel="stylesheet"
-        type="text/css">
+    <link href="<?php echo base_url() . 'assets/lib/font-awesome/css/font-awesome.min.css' ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url() . 'assets/lib/font-awesome/css/all.min.css' ?>" rel="stylesheet" type="text/css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php echo base_url() . 'assets/lib/animate/animate.min.css' ?>" rel="stylesheet">
@@ -55,9 +54,7 @@
                     <div class="col-md-12 mb-2">
                         <div class="form-group">
                             <!-- <label for="Type">Keyword</label> -->
-                            <input type="text" name="keyword" placeholder="Cari Sesuatu..."
-                                class="form-control form-control-lg form-control-a blog-search" placeholder="Keyword"
-                                required>
+                            <input type="text" name="keyword" placeholder="Cari Sesuatu..." class="form-control form-control-lg form-control-a blog-search" placeholder="Keyword" required>
                         </div>
                     </div>
 
@@ -73,15 +70,13 @@
     <!--/ Nav Star /-->
     <nav class="navbar navbar-default navbar-expand-lg fixed-top navbar-reduce">
         <div class="container">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b>SDN 03 MACANAN</span></a>
-            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none"
-                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
+            <a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b>SDN 1 BUSATO</span></a>
+            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
             </button>
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
@@ -99,14 +94,13 @@
                         <a class="nav-link" href="<?php echo site_url('blog'); ?>">Artikel</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Akademik
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?php echo site_url('agenda'); ?>">Agenda</a>
                             <a class="dropdown-item" href="<?php echo site_url('pengumuman'); ?>">Pengumuman</a>
-                           <a class="dropdown-item" href="<?php echo site_url('download'); ?>">Download</a>
+                            <a class="dropdown-item" href="<?php echo site_url('download'); ?>">Download</a>
                             <a class="dropdown-item" href="<?php echo site_url('guru'); ?>">Daftar Guru</a>
                             <a class="dropdown-item" href="<?php echo site_url('siswa'); ?>">Daftar Siswa</a>
                         </div>
@@ -116,8 +110,7 @@
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block"
-                data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
+            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
             </button>
         </div>
@@ -126,8 +119,7 @@
     <!--/ Carousel Star /-->
     <div class="intro intro-carousel">
         <div id="carousel" class="owl-carousel owl-theme">
-            <div class="carousel-item-a intro-item bg-image bg-image1"
-                style="background-image: url(<?php echo base_url() . 'assets/img/slide-1.jpg' ?>)">
+            <div class="carousel-item-a intro-item bg-image bg-image1" style="background-image: url(<?php echo base_url() . 'assets/img/slide-1.jpg' ?>)">
                 <div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">
@@ -135,11 +127,13 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="intro-body">
-                                        <p class="intro-title-top">Sekolah Dasar
-                                            <br>Negeri 03 Macanan</p>
+                                        <!-- <p class="intro-title-top">Sekolah Dasar
+                                            <br>Negeri 1 Busato
+                                        </p> -->
                                         <h4 class="intro-title mb-4">
                                             <span class="color-b">GURU </span> TERBAIK
-                                            <br>BERKUALITAS TINGGI</h4>
+                                            <br>BERKUALITAS TINGGI
+                                        </h4>
                                         <!-- <p class="intro-subtitle intro-price">
                                             <a href="#"><span class="price-a">LEARN MORE</span></a>
                                         </p> -->
@@ -150,8 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item-a intro-item bg-image"
-                style="background-image: url(<?php echo base_url() . 'assets/img/slide-2.jpg' ?>)">
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(<?php echo base_url() . 'assets/img/slide-2.jpg' ?>)">
                 <div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">
@@ -159,11 +152,13 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="intro-body">
-                                        <p class="intro-title-top">Sekolah Dasar
-                                            <br>Negeri 03 Macanan</p>
+                                        <!-- <p class="intro-title-top">Sekolah Dasar
+                                            <br>Negeri 1 Busato
+                                        </p> -->
                                         <h1 class="intro-title mb-4">
                                             <span class="color-b">BERFIKIR </span>
-                                            <br> KREATIF & INOVATIF</h1>
+                                            <br> KREATIF & INOVATIF
+                                        </h1>
                                         <!-- <p class="intro-subtitle intro-price">
                                             <a href="#"><span class="price-a">LEARN MORE</span></a>
                                         </p> -->
@@ -174,8 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item-a intro-item bg-image"
-                style="background-image: url(<?php echo base_url() . 'assets/img/slide-3.jpg' ?>)">
+            <div class="carousel-item-a intro-item bg-image" style="background-image: url(<?php echo base_url() . 'assets/img/slide-3.jpg' ?>)">
                 <div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">
@@ -183,11 +177,13 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="intro-body">
-                                        <p class="intro-title-top">Sekolah Dasar
-                                            <br>Negeri 03 Macanan</p>
+                                        <!-- <p class="intro-title-top">Sekolah Dasar
+                                            <br>Negeri 1 Busato
+                                        </p> -->
                                         <h1 class="intro-title mb-4">
                                             <span class="color-b">PROSES </span>
-                                            <br>BELAJAR INTERAKTIF</h1>
+                                            <br>BELAJAR INTERAKTIF
+                                        </h1>
                                         <!-- <p class="intro-subtitle intro-price">
                                             <a href="#"><span class="price-a">LEARN MORE</span></a>
                                         </p> -->
@@ -289,20 +285,18 @@
                     <div class="row foo">
                         <div class="col-md-12">
                             <?php foreach ($pengumuman->result() as $row) : ?>
-                            <div class="vent">
-                                <div class="img-vent">
-                                    <img src="<?php echo base_url() . 'assets/img/announcement-icon.png' ?>"
-                                        class="img-vent" alt="event-img">
+                                <div class="vent">
+                                    <div class="img-vent">
+                                        <img src="<?php echo base_url() . 'assets/img/announcement-icon.png' ?>" class="img-vent" alt="event-img">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="deskripsi">
-                                <h3><a href="<?php echo site_url('pengumuman'); ?>"
-                                        style="font-weight: 600;"><?php echo $row->pengumuman_judul; ?></a>
-                                </h3>
-                                <span><?php echo $row->tanggal; ?></span>
-                                <p><?php echo limit_words($row->pengumuman_deskripsi, 10) . '...'; ?></p>
-                                <hr class="event_line">
-                            </div>
+                                <div class="deskripsi">
+                                    <h3><a href="<?php echo site_url('pengumuman'); ?>" style="font-weight: 600;"><?php echo $row->pengumuman_judul; ?></a>
+                                    </h3>
+                                    <span><?php echo $row->tanggal; ?></span>
+                                    <p><?php echo limit_words($row->pengumuman_deskripsi, 10) . '...'; ?></p>
+                                    <hr class="event_line">
+                                </div>
                             <?php endforeach; ?>
 
                         </div>
@@ -318,18 +312,18 @@
                     <div class="row foo">
                         <div class="col-md-12">
                             <?php foreach ($agenda->result() as $row) : ?>
-                            <div class="event_date">
-                                <div class="event-date-wrap">
-                                    <p><?php echo date("d", strtotime($row->agenda_tanggal)); ?></p>
-                                    <span><?php echo date("M. y", strtotime($row->agenda_tanggal)); ?></span>
+                                <div class="event_date">
+                                    <div class="event-date-wrap">
+                                        <p><?php echo date("d", strtotime($row->agenda_tanggal)); ?></p>
+                                        <span><?php echo date("M. y", strtotime($row->agenda_tanggal)); ?></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="date-description">
-                                <h3><a href="<?php echo site_url('agenda'); ?>"><?php echo $row->agenda_nama; ?></a>
-                                </h3>
-                                <p><?php echo limit_words($row->agenda_deskripsi, 10) . '...'; ?></p>
-                                <hr class="event_line">
-                            </div>
+                                <div class="date-description">
+                                    <h3><a href="<?php echo site_url('agenda'); ?>"><?php echo $row->agenda_nama; ?></a>
+                                    </h3>
+                                    <p><?php echo limit_words($row->agenda_deskripsi, 10) . '...'; ?></p>
+                                    <hr class="event_line">
+                                </div>
                             <?php endforeach; ?>
 
                         </div>
@@ -355,23 +349,22 @@
                     </div>
                 </div>
             </div>
-			<div class="our_courses">
+            <div class="our_courses">
                 <div class="row">
                     <?php foreach ($berita->result() as $row) : ?>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="courses_box mb-2">
-                            <div class="course-img-wrap">
-                                <img src="<?php echo base_url() . 'assets/images/' . $row->tulisan_gambar; ?>"
-                                    class="img-fluid" alt="courses-img">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                            <div class="courses_box mb-2">
+                                <div class="course-img-wrap">
+                                    <img src="<?php echo base_url() . 'assets/images/' . $row->tulisan_gambar; ?>" class="img-fluid" alt="courses-img">
+                                </div>
+                                <!-- // end .course-img-wrap  -->
+                                <div class="spasi">
+                                    <a href="<?php echo site_url('artikel/' . $row->tulisan_slug); ?>" class="course-box-content">
+                                        <h3 style="text-align:center;font-size: larger;"><?php echo $row->tulisan_judul; ?></h3>
+                                    </a>
+                                </div>
                             </div>
-							<!-- // end .course-img-wrap  -->
-							<div class="spasi">
-							<a href="<?php echo site_url('artikel/' . $row->tulisan_slug); ?>" class="course-box-content">
-                                <h3 style="text-align:center;font-size: larger;"><?php echo $row->tulisan_judul; ?></h3>
-                            </a>
-							</div>
                         </div>
-                    </div>
                     <?php endforeach; ?>
                     <div class="col-md-12" style="text-align:center;">
                         <a href="<?php echo site_url('artikel'); ?>"><button class="btn btn-a btn-ku">Lihat Artikel
@@ -390,8 +383,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-3 chart_bottom">
                     <div class="chart-img">
-                        <img src="<?php echo base_url() . 'assets/img/chart-icon_1.png' ?>" class="img-fluid"
-                            alt="chart_icon">
+                        <img src="<?php echo base_url() . 'assets/img/chart-icon_1.png' ?>" class="img-fluid" alt="chart_icon">
                     </div>
                     <div class="chart-text">
                         <p><span class="counter"><?php echo $tot_guru; ?></span> Guru
@@ -400,8 +392,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 chart_bottom chart_top">
                     <div class="chart-img">
-                        <img src="<?php echo base_url() . 'assets/img/chart-icon_2.png' ?>" class="img-fluid"
-                            alt="chart_icon">
+                        <img src="<?php echo base_url() . 'assets/img/chart-icon_2.png' ?>" class="img-fluid" alt="chart_icon">
                     </div>
                     <div class="chart-text">
                         <p><span class="counter"><?php echo $tot_siswa; ?></span> Siswa
@@ -410,8 +401,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 chart_top">
                     <div class="chart-img">
-                        <img src="<?php echo base_url() . 'assets/img/chart-icon_3.png' ?>" class="img-fluid"
-                            alt="chart_icon">
+                        <img src="<?php echo base_url() . 'assets/img/chart-icon_3.png' ?>" class="img-fluid" alt="chart_icon">
                     </div>
                     <div class="chart-text">
                         <p><span class="counter"><?php echo $tot_files; ?></span> Download
@@ -420,8 +410,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="chart-img">
-                        <img src="<?php echo base_url() . 'assets/img/chart-icon_4.png' ?>" class="img-fluid"
-                            alt="chart_icon">
+                        <img src="<?php echo base_url() . 'assets/img/chart-icon_4.png' ?>" class="img-fluid" alt="chart_icon">
                     </div>
                     <div class="chart-text">
                         <p><span class="counter"><?php echo $tot_agenda; ?></span> Agenda</p>
@@ -440,22 +429,23 @@
                 <div class="col-sm-12 col-md-5">
                     <div class="widget-a">
                         <div class="w-header-a">
-                            <img src="<?php echo base_url() . 'assets/img/sd.png' ?>" class="img-fluid"
-                                style="float: left; margin-right: 10px; max-width: 20%;">
-                            <h3 class="w-title-a text-brand">Sekolah Dasar Negeri 03 Macanan</h3></br>
+                            <img src="<?php echo base_url() . 'assets/img/sd.png' ?>" class="img-fluid" style="float: left; margin-right: 10px; max-width: 20%;">
+                            <h3 class="w-title-a text-brand">Sekolah Dasar Negeri 1 Busato</h3></br>
 
                         </div>
                         <div class="w-body-a">
                             <p class="w-text-a color-text-a">
-                                Tawang, Macanan, Kec. Kebakkramat, Kabupaten Karanganyar, Jawa Tengah 57762
+                                Jln. Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
                             </p>
                         </div>
                         <div class="w-footer-a">
                             <ul class="list-unstyled">
                                 <li class="color-a">
-                                    <span class="color-text-a">Phone .</span> contact@example.com</li>
+                                    <span class="color-text-a">Phone .</span> +54 356 945234
+                                </li>
                                 <li class="color-a">
-                                    <span class="color-text-a">Email .</span> +54 356 945234</li>
+                                    <span class="color-text-a">Email .</span> contact@example.com
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -472,20 +462,16 @@
                                         <i class="fa fa-angle-right"></i> <a href="<?php echo site_url(''); ?>">Home</a>
                                     </li>
                                     <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a
-                                            href="<?php echo site_url('about'); ?>">Profil</a>
+                                        <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('about'); ?>">Profil</a>
                                     </li>
                                     <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a
-                                            href="<?php echo site_url('galeri'); ?>">Galeri</a>
+                                        <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('galeri'); ?>">Galeri</a>
                                     </li>
                                     <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a
-                                            href="<?php echo site_url('blog'); ?>">Artikel</a>
+                                        <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('blog'); ?>">Artikel</a>
                                     </li>
                                     <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a
-                                            href="<?php echo site_url('contact'); ?>">Kontak</a>
+                                        <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('contact'); ?>">Kontak</a>
                                     </li>
                                 </ul>
                             </div>
@@ -500,16 +486,13 @@
                         <div class="w-body-a">
                             <ul class="list-unstyled">
                                 <li class="item-list-a">
-                                    <i class="fa fa-angle-right"></i> <a
-                                        href="<?php echo site_url('agenda'); ?>">Agenda</a>
+                                    <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('agenda'); ?>">Agenda</a>
                                 </li>
                                 <li class="item-list-a">
-                                    <i class="fa fa-angle-right"></i> <a
-                                        href="<?php echo site_url('pengumuman'); ?>">Pengumuman</a>
+                                    <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('pengumuman'); ?>">Pengumuman</a>
                                 </li>
                                 <li class="item-list-a">
-                                    <i class="fa fa-angle-right"></i> <a
-                                        href="<?php echo site_url('learning'); ?>">E-learning</a>
+                                    <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('learning'); ?>">E-learning</a>
                                 </li>
                                 <li class="item-list-a">
                                     <i class="fa fa-angle-right"></i> <a href="<?php echo site_url('guru'); ?>">Daftar
@@ -569,7 +552,7 @@
                     <div class="copyright-footer">
                         <p class="copyright color-text-a">
                             &copy; Modified by
-                            <span class="color-a"><a href="http://bagus-erwanto.epizy.com">Bagus Erwanto</a></span> All
+                            <span class="color-a"><a href="">JD-Com@Cru--APTIKA</a></span> All
                             Rights Reserved.
                         </p>
                     </div>
