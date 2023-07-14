@@ -28,3 +28,4 @@ Login Page Jika Menggunakan Localhost
 * http://localhost/web_sd/administrator
 * user : admin
 * pass : admin
+# sdn1busato.sch.id
