@@ -74,8 +74,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url(''); ?>">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo site_url('about'); ?>">Profil</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo site_url('sambutan'); ?>">Sambutan</a>
+                            <a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
+                            <a class="dropdown-item" href="<?php echo site_url(''); ?>">Struktur</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url('galeri'); ?>">Galeri</a>
@@ -135,19 +142,18 @@
         </div>
     </section>
     <!--/ Intro Single End /-->
-    
+
     <!--//End Style 2-->
     <section class="our-teachers">
         <div class="container">
             <label for="inputUserName" class="col-sm-4 control-label">Rombongan Belajar</label>
             <div class="col-sm-7">
                 <select name="xkelas" class="form-control" required>
-                    <option value="">-Pilih-</option>
+                    <option value="">-Pilih Kelas-</option>
                     <?php
                     foreach ($data->result_array() as $row) {
                         $id_kelas = $row['kelas_id'];
                         $nm_kelas = $row['kelas_nama'];
-    
                     ?>
                         <option value="<?php echo $id_kelas; ?>"><?php echo $nm_kelas; ?></option>
                     <?php } ?>
@@ -172,6 +178,12 @@
             </div>
             <!-- End row -->
             <nav><?php echo $page; ?></nav>
+        </div>
+
+        <!-- ============================================ -->
+        <!--  -->
+            <!-- ============================================ -->
+
         </div>
     </section>
 

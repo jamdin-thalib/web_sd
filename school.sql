@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Mar 2020 pada 01.51
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.3.6
+-- Generation Time: Jul 27, 2023 at 07:22 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_agenda`
+-- Table structure for table `tbl_agenda`
 --
 
 CREATE TABLE `tbl_agenda` (
@@ -42,17 +41,17 @@ CREATE TABLE `tbl_agenda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_agenda`
+-- Dumping data for table `tbl_agenda`
 --
 
 INSERT INTO `tbl_agenda` (`agenda_id`, `agenda_nama`, `agenda_tanggal`, `agenda_deskripsi`, `agenda_mulai`, `agenda_selesai`, `agenda_tempat`, `agenda_waktu`, `agenda_keterangan`, `agenda_author`) VALUES
-(4, 'Penerimaan Raport Semester Ganjil Tahun Ajaran 2019-2020', '2019-12-27 15:34:30', 'Berakhirnya semester ganjil tahun pelajaran 2019-2020, ditandai dengan pembagian laporan hasil belajar.', '2019-12-30', '2020-02-29', 'SDN 03 Macanan', '07.30 - 12.00 WIB', 'Untuk kelas XI dan XII, pembagian raport dimulai pukul 07.30 WIB. Sedangkan untuk kelas X pada pukul 09.00 WIB. Raport diambil oleh orang tua/wali murid masing-masing.', 'Bagus Erwanto'),
-(5, 'Pendaftaran Siswa dan siswi baru SDN 03 Macanan', '2019-12-27 15:39:39', 'Pendaftaran siswa - siswi baru akan dibuka bulan January - Maret 2020, Bagi para calon siswa dan siswa dapat mendaftarkan dirinya ke SDN 03 Macanan', '2020-01-01', '2020-03-01', 'SDN 03 Macanan', '07.30 - 12.00 WIB', 'See you', 'Bagus Erwanto');
+(4, 'Penerimaan Raport Semester Ganjil Tahun Ajaran 2019-2020', '2019-12-27 15:34:30', 'Berakhirnya semester ganjil tahun pelajaran 2019-2020, ditandai dengan pembagian laporan hasil belajar.', '2019-12-30', '2020-02-29', 'SDN 1 BUSATO', '07.30 - 12.00 WIB', 'Untuk kelas XI dan XII, pembagian raport dimulai pukul 07.30 WIB. Sedangkan untuk kelas X pada pukul 09.00 WIB. Raport diambil oleh orang tua/wali murid masing-masing.', 'Bagus Erwanto'),
+(5, 'Pendaftaran Siswa dan siswi baru SDN 1 BUSATO', '2019-12-27 15:39:39', 'Pendaftaran siswa - siswi baru akan dibuka bulan January - Maret 2020, Bagi para calon siswa dan siswa dapat mendaftarkan dirinya ke SDN 1 BUSATO', '2020-01-01', '2020-03-01', 'SDN 1 BUSATO', '07.30 - 12.00 WIB', 'See you', 'Bagus Erwanto');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_album`
+-- Table structure for table `tbl_album`
 --
 
 CREATE TABLE `tbl_album` (
@@ -65,10 +64,18 @@ CREATE TABLE `tbl_album` (
   `album_cover` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_album`
+--
+
+INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`) VALUES
+(5, 'Kegiatan', '2023-06-27 07:25:50', 5, 'Bagus Erwanto', 1, 'a701123cef690f47ecb28aaf40b0481d.png'),
+(6, 'Inventaris Buku', '2023-06-28 03:55:15', 5, 'Jamdin Thalib', 3, 'b06517add10a494f464645b60ce0c29f.JPG');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_files`
+-- Table structure for table `tbl_files`
 --
 
 CREATE TABLE `tbl_files` (
@@ -82,7 +89,7 @@ CREATE TABLE `tbl_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_files`
+-- Dumping data for table `tbl_files`
 --
 
 INSERT INTO `tbl_files` (`file_id`, `file_judul`, `file_deskripsi`, `file_tanggal`, `file_oleh`, `file_download`, `file_data`) VALUES
@@ -91,7 +98,7 @@ INSERT INTO `tbl_files` (`file_id`, `file_judul`, `file_deskripsi`, `file_tangga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_galeri`
+-- Table structure for table `tbl_galeri`
 --
 
 CREATE TABLE `tbl_galeri` (
@@ -104,10 +111,20 @@ CREATE TABLE `tbl_galeri` (
   `galeri_author` varchar(60) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_galeri`
+--
+
+INSERT INTO `tbl_galeri` (`galeri_id`, `galeri_judul`, `galeri_tanggal`, `galeri_gambar`, `galeri_album_id`, `galeri_pengguna_id`, `galeri_author`) VALUES
+(19, 'Pramuka', '2023-06-27 07:26:19', '878d1b446f4f412fd220bb652c27c050.jpg', 5, 5, 'Bagus Erwanto'),
+(20, 'Ivnetarisasi Buku', '2023-06-28 03:56:18', '27bc99ba0ca70940818adce33c67ee3c.JPG', 6, 5, 'Jamdin Thalib'),
+(21, 'Ivnetarisasi Buku1', '2023-06-28 03:56:38', '9ba6f5bd661e8b922f1d1c267fc141f1.JPG', 6, 5, 'Jamdin Thalib'),
+(22, 'Ivnetarisasi Buku2', '2023-06-28 03:56:53', '01c7020b6d129c0ed1ec84746bf1f643.JPG', 6, 5, 'Jamdin Thalib');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_guru`
+-- Table structure for table `tbl_guru`
 --
 
 CREATE TABLE `tbl_guru` (
@@ -123,24 +140,18 @@ CREATE TABLE `tbl_guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_guru`
+-- Dumping data for table `tbl_guru`
 --
 
 INSERT INTO `tbl_guru` (`guru_id`, `guru_nip`, `guru_nama`, `guru_jenkel`, `guru_tmp_lahir`, `guru_tgl_lahir`, `guru_mapel`, `guru_photo`, `guru_tgl_input`) VALUES
-(9, '927482658274982', 'Bu Cantik', 'P', 'Mexico', '25 September 2000', 'Teknik Informatika', '9934efc0445c3fd33d4e87abff15a2ba.jpg', '2019-12-27 18:35:19'),
-(10, '927482658274982', 'Bu Cantik', 'P', 'Mexico', '25 September 1993', 'Teknik Informatika', 'a584c38f11540f35bbac5c5d0ce20553.jpg', '2019-12-27 18:41:04'),
-(11, '927482658274982', 'Bu Cantik', 'P', 'Padang', '25 September 1993', 'Teknik Komputer', '61de7e8809d094934200fa682b09b766.jpg', '2019-12-27 18:41:19'),
-(12, '927482658274982', 'Bu Cantik', 'P', 'Mexico', '25 September 2000', 'Teknik Informatika', 'd7a3cfcbb0a3d3bf430182e144f6374e.jpg', '2019-12-27 18:41:38'),
-(13, '927482658274982', 'Bu Cantik', 'P', 'Padang', '25 September 2000', 'Teknik Komputer', '2b89a3c476e392da84af4f6d4f9bdc99.jpg', '2019-12-27 18:41:55'),
-(14, '927482658274982', 'Bu Cantik', 'P', 'Mexico', '25 September 2000', 'Teknik Informatika', '97fde38e5245bbd76c705570c148c172.jpg', '2019-12-27 18:42:16'),
-(15, '927482658274982', 'Bu Cantik', 'P', 'Padang', '25 September 1993', 'Teknik Informatika', 'a8b02421149a0d441b7d98927db9da9b.jpg', '2019-12-27 18:42:30'),
-(16, '927482658274982', 'Bu Cantik', 'P', 'Padang', '25 September 2000', 'Teknik Komputer', '63e541b7ca624956c503b4bd65cae014.jpg', '2019-12-27 18:42:44'),
-(17, '927482658274982', 'Bu Cantik', 'P', 'Mexico', '25 September 1993', 'Teknik Komputer', '15f5f9d091a266d9d233c6aec958cf0a.jpg', '2019-12-27 18:43:05');
+(17, '927482658274982', 'FATRI SAMIN', 'P', 'Kotamobagu', '26 Juli 1989', 'GURU KELAS', '139a5b349fcee91669f7122a12a80159.jpg', '2019-12-27 18:43:05'),
+(18, '4481213132', 'MERSI LAHILOTE', 'P', 'Gorontalo', '25 Maret 1982', 'GURU KELAS', NULL, '2023-06-27 12:43:18'),
+(19, '121654545', 'HASAN TAABI', 'L', 'Gorontalo', '26 Juli 1978', 'GURU KELAS', NULL, '2023-07-14 10:53:42');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_inbox`
+-- Table structure for table `tbl_inbox`
 --
 
 CREATE TABLE `tbl_inbox` (
@@ -154,17 +165,18 @@ CREATE TABLE `tbl_inbox` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_inbox`
+-- Dumping data for table `tbl_inbox`
 --
 
 INSERT INTO `tbl_inbox` (`inbox_id`, `inbox_nama`, `inbox_email`, `inbox_kontak`, `inbox_pesan`, `inbox_tanggal`, `inbox_status`) VALUES
 (9, 'Bu Cantik', 'mr.volume@yahoo.com', '91231231241414', 'hallo saya coba kontak...!!', '2019-12-27 20:06:10', 0),
-(10, 'paul', 'a@mail.com', '232131', 'kobongan pak', '2020-02-20 14:43:31', 0);
+(10, 'paul', 'a@mail.com', '232131', 'kobongan pak', '2020-02-20 14:43:31', 0),
+(11, 'Jamdin Thalib', 'jamdinthalib@gmail.com', '57575', 'Perbaiki', '2023-07-03 08:22:46', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kategori`
+-- Table structure for table `tbl_kategori`
 --
 
 CREATE TABLE `tbl_kategori` (
@@ -174,7 +186,7 @@ CREATE TABLE `tbl_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_kategori`
+-- Dumping data for table `tbl_kategori`
 --
 
 INSERT INTO `tbl_kategori` (`kategori_id`, `kategori_nama`, `kategori_tanggal`) VALUES
@@ -188,7 +200,7 @@ INSERT INTO `tbl_kategori` (`kategori_id`, `kategori_nama`, `kategori_tanggal`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kelas`
+-- Table structure for table `tbl_kelas`
 --
 
 CREATE TABLE `tbl_kelas` (
@@ -197,36 +209,21 @@ CREATE TABLE `tbl_kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_kelas`
+-- Dumping data for table `tbl_kelas`
 --
 
 INSERT INTO `tbl_kelas` (`kelas_id`, `kelas_nama`) VALUES
-(1, 'Kelas X.1'),
-(2, 'Kelas X.2'),
-(3, 'Kelas X.3'),
-(4, 'Kelas X.4'),
-(5, 'Kelas X.5'),
-(6, 'Kelas X.6'),
-(7, 'Kelas X.7'),
-(8, 'Kelas XI IPA.1'),
-(9, 'Kelas XI IPA.2'),
-(10, 'Kelas XI IPA.3'),
-(11, 'Kelas XI IPA.4'),
-(12, 'Kelas XI IPA.5'),
-(13, 'Kelas XI IPA.6'),
-(14, 'Kelas XI IPA.7'),
-(15, 'Kelas XI IPS.1'),
-(16, 'Kelas XI IPS.2'),
-(17, 'Kelas XI IPS.3'),
-(18, 'Kelas XI IPS.4'),
-(19, 'Kelas XI IPS.5'),
-(20, 'Kelas XI IPS.6'),
-(21, 'Kelas XI IPS.7');
+(1, 'Kelas 1'),
+(2, 'Kelas 2'),
+(3, 'Kelas 3'),
+(4, 'Kelas 4'),
+(5, 'Kelas 5'),
+(6, 'Kelas 6');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_komentar`
+-- Table structure for table `tbl_komentar`
 --
 
 CREATE TABLE `tbl_komentar` (
@@ -241,18 +238,19 @@ CREATE TABLE `tbl_komentar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_komentar`
+-- Dumping data for table `tbl_komentar`
 --
 
 INSERT INTO `tbl_komentar` (`komentar_id`, `komentar_nama`, `komentar_email`, `komentar_isi`, `komentar_tanggal`, `komentar_status`, `komentar_tulisan_id`, `komentar_parent`) VALUES
 (6, 'bagus', 'bagus251001@gmail.com', 'good job :v', '2019-12-27 19:10:07', '1', 28, 0),
 (7, 'Bagus Erwanto', '', 'ok thx', '2019-12-27 19:10:49', '1', 28, 6),
-(8, 'Bagus Erwanto', '', 'iyo<br />\r\n', '2020-02-20 14:43:58', '1', 28, 6);
+(8, 'Bagus Erwanto', '', 'iyo<br />\r\n', '2020-02-20 14:43:58', '1', 28, 6),
+(9, 'JAMDIN THALIB', 'jamdinthalib@gmail.com', 'Mantap cekkkk', '2023-07-03 08:21:34', '1', 28, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengguna`
+-- Table structure for table `tbl_pengguna`
 --
 
 CREATE TABLE `tbl_pengguna` (
@@ -270,18 +268,17 @@ CREATE TABLE `tbl_pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengguna`
+-- Dumping data for table `tbl_pengguna`
 --
 
 INSERT INTO `tbl_pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_jenkel`, `pengguna_username`, `pengguna_password`, `pengguna_email`, `pengguna_nohp`, `pengguna_status`, `pengguna_level`, `pengguna_register`, `pengguna_photo`) VALUES
-(5, 'Bagus Erwanto', 'L', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'bagus251001@gmail.com', '0895392399306', 1, '1', '2019-12-26 02:50:26', '948baf1ca67d7bbc902e3113afa739ad.png'),
-(8, 'baguss', 'L', 'bagusS', 'f0224a9ff017e484c8a7c9859678b044', 'ba@mail.com', '8912391', 1, '2', '2020-03-03 01:55:33', 'a792d2628445a6d7b450dfb8b5b06348.jpg'),
-(9, 'rijlan', 'P', 'rijlan', '8d6348df60401c94a51aad99d02c0a80', 'a@mail.com', '213123', 1, '2', '2020-03-03 02:17:45', '1086b5db02bd7fa5392b2814d74889e5.jpg');
+(5, 'Jamdin Thalib', 'L', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'jamdinthalib@gmail.com', '085342394448', 1, '1', '2019-12-26 02:50:26', '75db0ebe5aea528312dc88670c778483.jpeg'),
+(8, 'Jamdin', 'L', 'jamdinT', '21232f297a57a5a743894a0e4a801fc3', 'jamdin@mail.com', '8912391', 1, '2', '2020-03-03 01:55:33', 'a792d2628445a6d7b450dfb8b5b06348.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengumuman`
+-- Table structure for table `tbl_pengumuman`
 --
 
 CREATE TABLE `tbl_pengumuman` (
@@ -293,11 +290,11 @@ CREATE TABLE `tbl_pengumuman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengumuman`
+-- Dumping data for table `tbl_pengumuman`
 --
 
 INSERT INTO `tbl_pengumuman` (`pengumuman_id`, `pengumuman_judul`, `pengumuman_deskripsi`, `pengumuman_tanggal`, `pengumuman_author`) VALUES
-(5, 'Penerimaan Siswa dan siswi baru SDN 03 Macanan', 'Pendaftaran siswa - siswi baru akan dibuka bulan January - Maret 2020, Bagi para calon siswa dan siswa dapat mendaftarkan dirinya ke SDN 03 Macanan', '2019-12-27 15:42:01', 'Bagus Erwanto'),
+(5, 'Penerimaan Siswa dan siswi baru SDN 1 Busato', 'Pendaftaran siswa - siswi baru akan dibuka bulan January - Maret 2020, Bagi para calon siswa dan siswa dapat mendaftarkan dirinya ke SDN 1 BUSATO', '2019-12-27 15:42:01', 'Bagus Erwanto'),
 (6, 'Pengumuman Libur Semester Ganjil Tahun Ajaran 2019-2020', 'Libur semester ganjil tahun ajaran 2019-2020 dimulai dari tanggal 2 January 2020 sampai dengan tanggal 31 Maret 2020.', '2019-12-27 15:53:21', 'Bagus Erwanto'),
 (7, 'Pengumuman Pembagian Raport Semester Ganjil Tahun Ajaran 2019-2020', 'Menjelang berakhirnya proses belajar-mengajar di semester ganjil tahun ajaran 2019-2020, maka akan diadakan pembagian hasil belajar/raport pada tanggal 4 Maret 2020 pukul 07.30 WIB.\r\nYang bertempat di M-Sekolah. Raport diambil oleh orang tua/wali kelas murid masing-masing', '2019-12-27 18:25:51', 'Bagus Erwanto'),
 (8, 'Pengumuman Proses Belajar Mengajar di Semester Genap Tahun Ajaran 2019-2020', 'Setelah libur semester ganjil tahun ajaran 2019-2020, proses belajar mengajar di semester genap tahun ajaran 2019-2020 mulai aktif kembali tanggal 30 Maret 2020.', '2019-12-27 18:27:15', 'Bagus Erwanto');
@@ -305,7 +302,7 @@ INSERT INTO `tbl_pengumuman` (`pengumuman_id`, `pengumuman_judul`, `pengumuman_d
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengunjung`
+-- Table structure for table `tbl_pengunjung`
 --
 
 CREATE TABLE `tbl_pengunjung` (
@@ -316,7 +313,7 @@ CREATE TABLE `tbl_pengunjung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengunjung`
+-- Dumping data for table `tbl_pengunjung`
 --
 
 INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung_ip`, `pengunjung_perangkat`) VALUES
@@ -337,12 +334,18 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (15, '2020-01-28 00:53:26', '::1', 'Firefox'),
 (16, '2020-02-04 12:01:59', '::1', 'Firefox'),
 (17, '2020-02-20 14:42:37', '127.0.0.1', 'Firefox'),
-(18, '2020-03-03 00:43:35', '::1', 'Firefox');
+(18, '2020-03-03 00:43:35', '::1', 'Firefox'),
+(19, '2023-06-27 00:52:06', '::1', 'Chrome'),
+(20, '2023-06-27 00:58:17', '127.0.0.1', 'Firefox'),
+(21, '2023-06-28 03:32:49', '::1', 'Chrome'),
+(22, '2023-07-03 07:54:57', '::1', 'Chrome'),
+(23, '2023-07-14 10:50:16', '::1', 'Chrome'),
+(24, '2023-07-27 05:19:34', '::1', 'Chrome');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_siswa`
+-- Table structure for table `tbl_siswa`
 --
 
 CREATE TABLE `tbl_siswa` (
@@ -355,16 +358,18 @@ CREATE TABLE `tbl_siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_siswa`
+-- Dumping data for table `tbl_siswa`
 --
 
 INSERT INTO `tbl_siswa` (`siswa_id`, `siswa_nis`, `siswa_nama`, `siswa_jenkel`, `siswa_kelas_id`, `siswa_photo`) VALUES
-(13, '123123', 'Bagus', 'L', 1, '37e26c8a4b915738e53e819a5d7681bc.png');
+(14, '2123122', 'rfasd', 'L', 1, NULL),
+(15, '2123122', 'Jamdin Thalib', 'L', 2, NULL),
+(16, '5448', 'joko', 'L', 4, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_tulisan`
+-- Table structure for table `tbl_tulisan`
 --
 
 CREATE TABLE `tbl_tulisan` (
@@ -383,40 +388,40 @@ CREATE TABLE `tbl_tulisan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_tulisan`
+-- Dumping data for table `tbl_tulisan`
 --
 
 INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`) VALUES
-(26, 'Belum 2 Bulan Jokowi Rombak Perpres Kemendikbud', '<p>Belum sampai dua bulan lewat Peraturan Presiden (Perpres). Apa yang diubah Jokowi? Perpres pertama dikeluarkan pada 24 Oktober 2019 yaitu Perpres Nomor 72 Tahun 2019 tentang Kemendikbud Nah, pada 16 Desember 2019, Perpres itu diubah dengan Perpres Nomor 82 Tahun 2019 tentang Kemendikbud. Apa bedanya?<br />\r\n<br />\r\nSalah satunya adalah perampingan struktur organisasi. Bila dengan Perpres lama ada 16 pos di Kemendikbud, maka di Perpres baru hanya 9 pos. Berikut perbedaan sebelum dan sesudah sebagaimana dikutip detikcom, Kamis (26/12/2019):<br />\r\n&nbsp;</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n			<p><strong>Baca juga: </strong><a href=\"https://news.detik.com/read/2019/12/23/172648/4833599/10/mendikbud-nadiem-fokus-cek-gedung-sekolah-rentan-roboh-di-2020\">Mendikbud Nadiem Fokus Cek Gedung Sekolah Rentan Roboh di 2020</a></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\n<strong>Perpres Nomor 72 Tahun 2019</strong><br />\r\nPasal 6<br />\r\nKementerian Pendidikan dan Kebudayaan terdiri atas:<br />\r\n<br />\r\na. Sekretariat Jenderal;<br />\r\nb. Direktorat Jenderal Guru dan Tenaga Kependidikan;<br />\r\nc. Direktorat Jenderal Pendidikan Anak Usia Dini dan Pendidikan Masyarakat;<br />\r\nd. Direktorat Jenderal Pendidikan Dasar dan Menengah;<br />\r\ne. Direktorat Jenderal Pembelajaran dan Kemahasiswaan;<br />\r\nf. Direktorat Jenderal Kelembagaan Ilmu Pengetahuan, Teknologi, dan Pendidikan Tinggi;<br />\r\ng. Direktorat Jenderal Sumber Daya Ilmu Pengetahuan, Teknologi Pendidikan Tinggi;<br />\r\nh. Direktorat Jenderal Kebudayaan;<br />\r\ni. Inspektorat Jenderal;<br />\r\nj. Badan Pengembangan Bahasa dan Perbukuan;<br />\r\nk. Badan Penelitian dan Pengembangan;<br />\r\nl. Staf Ahli Bidang Inovasi dan Daya Saing;<br />\r\nm. Staf Ahli Bidang Hubungan Pusat dan Daerah;<br />\r\nn. Staf Ahli Bidang Pembangunan Karakter;<br />\r\no. Staf Ahli Bidang Regulasi Pendidikan dan Kebudayaan; dan<br />\r\np. Staf Ahli Bidang Akademik.<br />\r\n&nbsp;</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n			<p><strong>Baca juga: </strong><a href=\"https://news.detik.com/read/2019/12/17/202937/4826704/10/kemendikbud-tegaskan-penggantian-format-ujian-nasional-bukan-coba-coba\">Kemendikbud Tegaskan Penggantian Format Ujian Nasional Bukan Coba-coba</a></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\n<strong>Perpres Nomor 82 Tahun 2019</strong><br />\r\n<br />\r\nPasal 6<br />\r\nKementerian Pendidikan dan Kebudayaan terdiri atas:<br />\r\na. Sekretariat Jenderal;<br />\r\nb. Direktorat Jenderal Guru dan Tenaga Kependidikan;<br />\r\nc. Direktorat Jenderal Pendidikan Anak Usia Dini,<br />\r\nPendidikan Dasar, dan Pendidikan Menengah;<br />\r\nd. Direktorat Jenderal Pendidikan Vokasi;<br />\r\ne. Direktorat Jenderal Pendidikan Tinggi;<br />\r\nf. Direktorat Jenderal Kebudayaan;<br />\r\ng. Inspektorat Jenderal;<br />\r\nh. Badan Penelitian dan Pengembangan dan Perbukuan;<br />\r\ni. Badan Pengembangan dan Pembinaan Bahasa; dan<br />\r\nj. Staf Ahli Bidang Regulasi Pendidikan dan Kebudayaan.</p>\r\n', '2019-12-26', 2, 'Politik', 10, 'a0f2149771d5a290ea4e65e51bde4b8c.jpeg', 5, 'Bagus Erwanto', 0, 'belum-2-bulan-jokowi-rombak-perpres-kemendikbud'),
-(28, 'KPK Berharap Polisi Ungkap Dalang di Balik Kasus Air Keras Novel Baswedan', '<p>KPK berharap polisi bisa mengembangkan penyelidikan kasus penyiraman air keras kepada penyidik Novel Baswedan, setelah mendapatkan dua tersangka operator teror tersebut.<a href=\"https://www.suara.com/tag/wakil-ketua-kpk-nurul-ghufron\">Wakil Ketua KPK Nurul Ghufron</a>&nbsp;mengatakan, pengembangan penyelidikan itu diharapkan bisa mengungkap aktor intelektual di balik penyerangan terhadap Novel tahun 2017.</p>\r\n\r\n<p>&quot;Saya yakin, itu nanti akan dikembangkan oleh Polri,&quot; kata Nurul Ghufro dihubungi&nbsp;<em>Suara.com,</em>&nbsp;Jumat (27/12/2019) malam.</p>\r\n\r\n<p>Nurul berharap, dua pelaku penyiraman air keras terhadap Novel dapat dihukum seberat-beratnya. Ia mengatakan, hukuman seperti itu ditujukan untuk memberikan harapan kepada publik bahwa hukum di Indonesia tegas.</p>\r\n\r\n<p>Sebelumnya diberitakan, Kapala Badan Reserse Kriminal Polri Komisaris Jenderal Listyo Sigit Prabowo mengatakan, 2 pelaku teror terhadap Novel sudah ditangkap. Keduanya berstatus sebagai polisi aktif.</p>\r\n\r\n<p>Namun, Listyo Sigit tak menyebutkan asal kesatuan mereka. Ia hanya mengatakan, RB dan RM ditangkap atas bantuan Korp Kepolisian Brimob.</p>\r\n\r\n<p>&quot;Jadi pelaku ada 2 orang inisial RM dan RB. Polri aktif,&quot; kata Listyo Sigit di Polda Metro Jaya.</p>\r\n\r\n<p>Sementara Karopenmas Divisi Humas Mabes Polri Brigjen Argo Yuwono mengatakan, kedua pelaku ditangkap di daerah Cimanggis, Depok, Jawa Barat.</p>\r\n\r\n<p>&quot;Mereka ditangkap Kamis (26/12) malam. Jumat pagi jadi tersangka. Tadi siang pemeriksaan sebagai tersangka dan ada pendampingan hukum dari Mabes Polri,&quot; kata Argo.</p>\r\n', '2019-12-27', 2, 'Politik', 26, '4ee4f6ab673c9c5716657ab5d83cab70.jpg', 5, 'Bagus Erwanto', 0, 'kpk-berharap-polisi-ungkap-dalang-di-balik-kasus-air-keras-novel-baswedan'),
-(29, 'Messenger Paksa Pengguna Harus Memiliki Facebook untuk Membuat Akun', '<p>Pengguna Messenger sebelumnya bisa membuat akun hanya menggunakan nomor ponsel. Akan tetapi opsi ini tidak tersedia lagi dan pengguna baru Messenger sekarang diwajibkan untuk memiliki akun Facebook.</p>\r\n\r\n<p>Perubahan ini ditemukan oleh beberapa pengguna yang menuliskan keluhan di Reddit dan menyebut bahwa mereka tidak dapat masuk ke akun Messenger tanpa memiliki akun Facebook yang tertaut.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&quot;Saya mencoba mengatur akun kedua di Messenger dan tidak ada lagi opsi untuk mendaftar tanpa Facebook. Sekarang saya harus membuat akun Facebook. Saya bertanya-tanya apakah ada orang lain yang juga mengalami ini,&quot; tulis seorang pengguna di Reddit.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Facebook telah menuliskan kebijakan baru ini di Pusat Bantuan Facebook. Dalam kolom pertanyaan &quot;Bisakah saya mendaftar ke Messenger tanpa akun Facebook?&quot; perusahaan milik Mark Zuckerberg itu menjelaskan bahwa pengguna tidak bisa mendaftar ke Messenger dan harus membuat akun Facebook untuk menggunakanya.</p>\r\n\r\n<p>Dilansir dari Gizchina, perubahan ini menuai beberapa kritik dari para pengguna yang hanya ingin menggunakan Messenger untuk menghubungi teman dan keluarga akan tetapi tidak ingin memiliki akun Facebook.</p>\r\n\r\n<p>Kebijakan ini kemungkinan bisa membuat beberapa pengguna bermigrasi ke layanan lain atau terpaksa membuat akun Facebook untuk tujuan itu saja. Sebagian besar berharap kebijakan ini juga tidak akan diterapkan Facebook untuk pengguna WhatsApp dan Instagram.</p>\r\n', '2019-12-28', 1, 'Pendidikan', 3, '508c9549eca0fb64b3f4c4ba2bf7dda5.jpg', 5, 'Bagus Erwanto', 0, 'messenger-paksa-pengguna-harus-memiliki-facebook-untuk-membuat-akun'),
-(30, 'Pasutri Sempat Terhimpit Longsor TPT di Palabuhanratu Sukabumi', '<p>&nbsp;Sebuah rumah di Kampung Gentong RT 06/06 Desa Cikadu, Kecamatan Palabuhanratu, Kabupaten Sukabumi ambruk usai tertimpa longsor dari Tembok Penahan Tanah (TPT). Peristiwa itu terjadi pada Rabu (25/12/2019) dini hari, sekitar pukul 01.30 WIB.</p>\r\n\r\n<p>BACA JUGA:&nbsp;<strong><a href=\"https://sukabumiupdate.com/detail/sukabumi/peristiwa/62167-Baru-Satu-Bulan-TPT-di-Ciemas-Sukabumi-Ambruk-Digerus-Hujan-DPU-Segera-Perbaiki\" target=\"_blank\">Baru Satu Bulan TPT di Ciemas Sukabumi Ambruk Digerus Hujan, DPU: Segera Perbaiki</a></strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Kapolsek Palabuhanratu, AKP Oki Kartikayana mengatakan, TPT yang ambrol tingginya kurang lebih tiga meter dan lebar dua meter. Saat kejadian, pemilik rumah Herdi (50 tahun) sedang menyalakan obat nyamuk di ruang tengah, sementara istrinya Eneh (45 tahun) tengah tertidur lelap di dalam kamar.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&quot;Tiba-tiba tembok beton yang ada di belakang rumah Pak Herdi ambrol menimpa kamar yang didalamnya ada Ibu Eneh. Pak Herdi sempat tertimpa kayu atap sedangkan istrinya tertindih lemari,&quot; ujar Oki kepada&nbsp;<em><strong>sukabumiupdate.com</strong></em>, Rabu siang.</p>\r\n\r\n<p>BACA JUGA:&nbsp;<strong><a href=\"https://sukabumiupdate.com/detail/sukabumi/peristiwa/62008-TPT-Sungai-Cisuda-Ambruk-Kantor-DPD-PKS-Kota-Sukabumi-Terancam\" target=\"_blank\">TPT Sungai Cisuda Ambruk, Kantor DPD PKS Kota Sukabumi Terancam</a></strong></p>\r\n\r\n<p>Lanjut Oki, Herdi yang berhasil menyelamatkan diri dari himpitan kayu kemudian meminta pertolongan kepada warga setempat, untuk mengevakuasi istrinya yang masih terhimpit lemari.</p>\r\n\r\n<p>&quot;Alhamdulillah berhasil diselamatkan dan dievakuasi oleh warga setempat. Tidak ada korban jiwa, namun rumah rusak berat. Kerugian material masih dihitung,&quot; lanjutnya.</p>\r\n\r\n<p>BACA JUGA:&nbsp;<strong><a href=\"https://sukabumiupdate.com/detail/sukabumi/peristiwa/62001-Penuturan-Warga-Saat-TPT-di-Sekarwangi-Cibadak-Diterjang-Longsor\" target=\"_blank\">Penuturan Warga Saat TPT di Sekarwangi Cibadak Diterjang Longsor</a></strong></p>\r\n\r\n<p>Hingga kini, masih kata Oki, petugas kepolisian bersama unsur terkait lainnya dibantu warga setempat masih membersihkan bangunan rumah yang tertimpa material longsor dan menyelamatkan barang-barang yang masih bisa diselamatkan.</p>\r\n\r\n<p>&quot;Anggota di lapangan masih melakukan koordinasi dengan unsur lainnya untuk penanganan korban selanjutnya. Sementara korban dievakuasi ke rumah kerabat terdekat,&quot; pungkas Oki</p>\r\n', '2019-12-28', 3, 'Sains', 11, '7c28cfb3ebe5a9221589602429263899.jpg', 5, 'Bagus Erwanto', 0, 'pasutri-sempat-terhimpit-longsor-tpt-di-palabuhanratu-sukabumi');
+(26, 'Belum 2 Bulan Jokowi Rombak Perpres Kemendikbud', '<p>Belum sampai dua bulan lewat Peraturan Presiden (Perpres). Apa yang diubah Jokowi? Perpres pertama dikeluarkan pada 24 Oktober 2019 yaitu Perpres Nomor 72 Tahun 2019 tentang Kemendikbud Nah, pada 16 Desember 2019, Perpres itu diubah dengan Perpres Nomor 82 Tahun 2019 tentang Kemendikbud. Apa bedanya?<br />\r\n<br />\r\nSalah satunya adalah perampingan struktur organisasi. Bila dengan Perpres lama ada 16 pos di Kemendikbud, maka di Perpres baru hanya 9 pos. Berikut perbedaan sebelum dan sesudah sebagaimana dikutip detikcom, Kamis (26/12/2019):<br />\r\n&nbsp;</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n			<p><strong>Baca juga: </strong><a href=\"https://news.detik.com/read/2019/12/23/172648/4833599/10/mendikbud-nadiem-fokus-cek-gedung-sekolah-rentan-roboh-di-2020\">Mendikbud Nadiem Fokus Cek Gedung Sekolah Rentan Roboh di 2020</a></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\n<strong>Perpres Nomor 72 Tahun 2019</strong><br />\r\nPasal 6<br />\r\nKementerian Pendidikan dan Kebudayaan terdiri atas:<br />\r\n<br />\r\na. Sekretariat Jenderal;<br />\r\nb. Direktorat Jenderal Guru dan Tenaga Kependidikan;<br />\r\nc. Direktorat Jenderal Pendidikan Anak Usia Dini dan Pendidikan Masyarakat;<br />\r\nd. Direktorat Jenderal Pendidikan Dasar dan Menengah;<br />\r\ne. Direktorat Jenderal Pembelajaran dan Kemahasiswaan;<br />\r\nf. Direktorat Jenderal Kelembagaan Ilmu Pengetahuan, Teknologi, dan Pendidikan Tinggi;<br />\r\ng. Direktorat Jenderal Sumber Daya Ilmu Pengetahuan, Teknologi Pendidikan Tinggi;<br />\r\nh. Direktorat Jenderal Kebudayaan;<br />\r\ni. Inspektorat Jenderal;<br />\r\nj. Badan Pengembangan Bahasa dan Perbukuan;<br />\r\nk. Badan Penelitian dan Pengembangan;<br />\r\nl. Staf Ahli Bidang Inovasi dan Daya Saing;<br />\r\nm. Staf Ahli Bidang Hubungan Pusat dan Daerah;<br />\r\nn. Staf Ahli Bidang Pembangunan Karakter;<br />\r\no. Staf Ahli Bidang Regulasi Pendidikan dan Kebudayaan; dan<br />\r\np. Staf Ahli Bidang Akademik.<br />\r\n&nbsp;</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n			<p><strong>Baca juga: </strong><a href=\"https://news.detik.com/read/2019/12/17/202937/4826704/10/kemendikbud-tegaskan-penggantian-format-ujian-nasional-bukan-coba-coba\">Kemendikbud Tegaskan Penggantian Format Ujian Nasional Bukan Coba-coba</a></p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\n<strong>Perpres Nomor 82 Tahun 2019</strong><br />\r\n<br />\r\nPasal 6<br />\r\nKementerian Pendidikan dan Kebudayaan terdiri atas:<br />\r\na. Sekretariat Jenderal;<br />\r\nb. Direktorat Jenderal Guru dan Tenaga Kependidikan;<br />\r\nc. Direktorat Jenderal Pendidikan Anak Usia Dini,<br />\r\nPendidikan Dasar, dan Pendidikan Menengah;<br />\r\nd. Direktorat Jenderal Pendidikan Vokasi;<br />\r\ne. Direktorat Jenderal Pendidikan Tinggi;<br />\r\nf. Direktorat Jenderal Kebudayaan;<br />\r\ng. Inspektorat Jenderal;<br />\r\nh. Badan Penelitian dan Pengembangan dan Perbukuan;<br />\r\ni. Badan Pengembangan dan Pembinaan Bahasa; dan<br />\r\nj. Staf Ahli Bidang Regulasi Pendidikan dan Kebudayaan.</p>\r\n', '2019-12-26', 2, 'Politik', 11, 'a0f2149771d5a290ea4e65e51bde4b8c.jpeg', 5, 'Bagus Erwanto', 0, 'belum-2-bulan-jokowi-rombak-perpres-kemendikbud'),
+(28, 'KPK Berharap Polisi Ungkap Dalang di Balik Kasus Air Keras Novel Baswedan', '<p>KPK berharap polisi bisa mengembangkan penyelidikan kasus penyiraman air keras kepada penyidik Novel Baswedan, setelah mendapatkan dua tersangka operator teror tersebut.<a href=\"https://www.suara.com/tag/wakil-ketua-kpk-nurul-ghufron\">Wakil Ketua KPK Nurul Ghufron</a>&nbsp;mengatakan, pengembangan penyelidikan itu diharapkan bisa mengungkap aktor intelektual di balik penyerangan terhadap Novel tahun 2017.</p>\r\n\r\n<p>&quot;Saya yakin, itu nanti akan dikembangkan oleh Polri,&quot; kata Nurul Ghufro dihubungi&nbsp;<em>Suara.com,</em>&nbsp;Jumat (27/12/2019) malam.</p>\r\n\r\n<p>Nurul berharap, dua pelaku penyiraman air keras terhadap Novel dapat dihukum seberat-beratnya. Ia mengatakan, hukuman seperti itu ditujukan untuk memberikan harapan kepada publik bahwa hukum di Indonesia tegas.</p>\r\n\r\n<p>Sebelumnya diberitakan, Kapala Badan Reserse Kriminal Polri Komisaris Jenderal Listyo Sigit Prabowo mengatakan, 2 pelaku teror terhadap Novel sudah ditangkap. Keduanya berstatus sebagai polisi aktif.</p>\r\n\r\n<p>Namun, Listyo Sigit tak menyebutkan asal kesatuan mereka. Ia hanya mengatakan, RB dan RM ditangkap atas bantuan Korp Kepolisian Brimob.</p>\r\n\r\n<p>&quot;Jadi pelaku ada 2 orang inisial RM dan RB. Polri aktif,&quot; kata Listyo Sigit di Polda Metro Jaya.</p>\r\n\r\n<p>Sementara Karopenmas Divisi Humas Mabes Polri Brigjen Argo Yuwono mengatakan, kedua pelaku ditangkap di daerah Cimanggis, Depok, Jawa Barat.</p>\r\n\r\n<p>&quot;Mereka ditangkap Kamis (26/12) malam. Jumat pagi jadi tersangka. Tadi siang pemeriksaan sebagai tersangka dan ada pendampingan hukum dari Mabes Polri,&quot; kata Argo.</p>\r\n', '2019-12-27', 2, 'Politik', 32, '4ee4f6ab673c9c5716657ab5d83cab70.jpg', 5, 'Bagus Erwanto', 0, 'kpk-berharap-polisi-ungkap-dalang-di-balik-kasus-air-keras-novel-baswedan'),
+(29, 'Messenger Paksa Pengguna Harus Memiliki Facebook untuk Membuat Akun', '<p>Pengguna Messenger sebelumnya bisa membuat akun hanya menggunakan nomor ponsel. Akan tetapi opsi ini tidak tersedia lagi dan pengguna baru Messenger sekarang diwajibkan untuk memiliki akun Facebook.</p>\r\n\r\n<p>Perubahan ini ditemukan oleh beberapa pengguna yang menuliskan keluhan di Reddit dan menyebut bahwa mereka tidak dapat masuk ke akun Messenger tanpa memiliki akun Facebook yang tertaut.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&quot;Saya mencoba mengatur akun kedua di Messenger dan tidak ada lagi opsi untuk mendaftar tanpa Facebook. Sekarang saya harus membuat akun Facebook. Saya bertanya-tanya apakah ada orang lain yang juga mengalami ini,&quot; tulis seorang pengguna di Reddit.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Facebook telah menuliskan kebijakan baru ini di Pusat Bantuan Facebook. Dalam kolom pertanyaan &quot;Bisakah saya mendaftar ke Messenger tanpa akun Facebook?&quot; perusahaan milik Mark Zuckerberg itu menjelaskan bahwa pengguna tidak bisa mendaftar ke Messenger dan harus membuat akun Facebook untuk menggunakanya.</p>\r\n\r\n<p>Dilansir dari Gizchina, perubahan ini menuai beberapa kritik dari para pengguna yang hanya ingin menggunakan Messenger untuk menghubungi teman dan keluarga akan tetapi tidak ingin memiliki akun Facebook.</p>\r\n\r\n<p>Kebijakan ini kemungkinan bisa membuat beberapa pengguna bermigrasi ke layanan lain atau terpaksa membuat akun Facebook untuk tujuan itu saja. Sebagian besar berharap kebijakan ini juga tidak akan diterapkan Facebook untuk pengguna WhatsApp dan Instagram.</p>\r\n', '2019-12-28', 1, 'Pendidikan', 4, '508c9549eca0fb64b3f4c4ba2bf7dda5.jpg', 5, 'Bagus Erwanto', 0, 'messenger-paksa-pengguna-harus-memiliki-facebook-untuk-membuat-akun'),
+(30, 'Pasutri Sempat Terhimpit Longsor TPT di Palabuhanratu Sukabumi', '<p>&nbsp;Sebuah rumah di Kampung Gentong RT 06/06 Desa Cikadu, Kecamatan Palabuhanratu, Kabupaten Sukabumi ambruk usai tertimpa longsor dari Tembok Penahan Tanah (TPT). Peristiwa itu terjadi pada Rabu (25/12/2019) dini hari, sekitar pukul 01.30 WIB.</p>\r\n\r\n<p>BACA JUGA:&nbsp;<strong><a href=\"https://sukabumiupdate.com/detail/sukabumi/peristiwa/62167-Baru-Satu-Bulan-TPT-di-Ciemas-Sukabumi-Ambruk-Digerus-Hujan-DPU-Segera-Perbaiki\" target=\"_blank\">Baru Satu Bulan TPT di Ciemas Sukabumi Ambruk Digerus Hujan, DPU: Segera Perbaiki</a></strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Kapolsek Palabuhanratu, AKP Oki Kartikayana mengatakan, TPT yang ambrol tingginya kurang lebih tiga meter dan lebar dua meter. Saat kejadian, pemilik rumah Herdi (50 tahun) sedang menyalakan obat nyamuk di ruang tengah, sementara istrinya Eneh (45 tahun) tengah tertidur lelap di dalam kamar.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&quot;Tiba-tiba tembok beton yang ada di belakang rumah Pak Herdi ambrol menimpa kamar yang didalamnya ada Ibu Eneh. Pak Herdi sempat tertimpa kayu atap sedangkan istrinya tertindih lemari,&quot; ujar Oki kepada&nbsp;<em><strong>sukabumiupdate.com</strong></em>, Rabu siang.</p>\r\n\r\n<p>BACA JUGA:&nbsp;<strong><a href=\"https://sukabumiupdate.com/detail/sukabumi/peristiwa/62008-TPT-Sungai-Cisuda-Ambruk-Kantor-DPD-PKS-Kota-Sukabumi-Terancam\" target=\"_blank\">TPT Sungai Cisuda Ambruk, Kantor DPD PKS Kota Sukabumi Terancam</a></strong></p>\r\n\r\n<p>Lanjut Oki, Herdi yang berhasil menyelamatkan diri dari himpitan kayu kemudian meminta pertolongan kepada warga setempat, untuk mengevakuasi istrinya yang masih terhimpit lemari.</p>\r\n\r\n<p>&quot;Alhamdulillah berhasil diselamatkan dan dievakuasi oleh warga setempat. Tidak ada korban jiwa, namun rumah rusak berat. Kerugian material masih dihitung,&quot; lanjutnya.</p>\r\n\r\n<p>BACA JUGA:&nbsp;<strong><a href=\"https://sukabumiupdate.com/detail/sukabumi/peristiwa/62001-Penuturan-Warga-Saat-TPT-di-Sekarwangi-Cibadak-Diterjang-Longsor\" target=\"_blank\">Penuturan Warga Saat TPT di Sekarwangi Cibadak Diterjang Longsor</a></strong></p>\r\n\r\n<p>Hingga kini, masih kata Oki, petugas kepolisian bersama unsur terkait lainnya dibantu warga setempat masih membersihkan bangunan rumah yang tertimpa material longsor dan menyelamatkan barang-barang yang masih bisa diselamatkan.</p>\r\n\r\n<p>&quot;Anggota di lapangan masih melakukan koordinasi dengan unsur lainnya untuk penanganan korban selanjutnya. Sementara korban dievakuasi ke rumah kerabat terdekat,&quot; pungkas Oki</p>\r\n', '2019-12-28', 3, 'Sains', 12, '7c28cfb3ebe5a9221589602429263899.jpg', 5, 'Bagus Erwanto', 0, 'pasutri-sempat-terhimpit-longsor-tpt-di-palabuhanratu-sukabumi');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tbl_agenda`
+-- Indexes for table `tbl_agenda`
 --
 ALTER TABLE `tbl_agenda`
   ADD PRIMARY KEY (`agenda_id`);
 
 --
--- Indeks untuk tabel `tbl_album`
+-- Indexes for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
   ADD PRIMARY KEY (`album_id`),
   ADD KEY `album_pengguna_id` (`album_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_files`
+-- Indexes for table `tbl_files`
 --
 ALTER TABLE `tbl_files`
   ADD PRIMARY KEY (`file_id`);
 
 --
--- Indeks untuk tabel `tbl_galeri`
+-- Indexes for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
   ADD PRIMARY KEY (`galeri_id`),
@@ -424,62 +429,62 @@ ALTER TABLE `tbl_galeri`
   ADD KEY `galeri_pengguna_id` (`galeri_pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_guru`
+-- Indexes for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
   ADD PRIMARY KEY (`guru_id`);
 
 --
--- Indeks untuk tabel `tbl_inbox`
+-- Indexes for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
   ADD PRIMARY KEY (`inbox_id`);
 
 --
--- Indeks untuk tabel `tbl_kategori`
+-- Indexes for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   ADD PRIMARY KEY (`kategori_id`);
 
 --
--- Indeks untuk tabel `tbl_kelas`
+-- Indexes for table `tbl_kelas`
 --
 ALTER TABLE `tbl_kelas`
   ADD PRIMARY KEY (`kelas_id`);
 
 --
--- Indeks untuk tabel `tbl_komentar`
+-- Indexes for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
   ADD PRIMARY KEY (`komentar_id`),
   ADD KEY `komentar_tulisan_id` (`komentar_tulisan_id`);
 
 --
--- Indeks untuk tabel `tbl_pengguna`
+-- Indexes for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
   ADD PRIMARY KEY (`pengguna_id`);
 
 --
--- Indeks untuk tabel `tbl_pengumuman`
+-- Indexes for table `tbl_pengumuman`
 --
 ALTER TABLE `tbl_pengumuman`
   ADD PRIMARY KEY (`pengumuman_id`);
 
 --
--- Indeks untuk tabel `tbl_pengunjung`
+-- Indexes for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
   ADD PRIMARY KEY (`pengunjung_id`);
 
 --
--- Indeks untuk tabel `tbl_siswa`
+-- Indexes for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   ADD PRIMARY KEY (`siswa_id`);
 
 --
--- Indeks untuk tabel `tbl_tulisan`
+-- Indexes for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
   ADD PRIMARY KEY (`tulisan_id`),
@@ -487,89 +492,89 @@ ALTER TABLE `tbl_tulisan`
   ADD KEY `tulisan_pengguna_id` (`tulisan_pengguna_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_agenda`
+-- AUTO_INCREMENT for table `tbl_agenda`
 --
 ALTER TABLE `tbl_agenda`
   MODIFY `agenda_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_album`
+-- AUTO_INCREMENT for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
-  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_files`
+-- AUTO_INCREMENT for table `tbl_files`
 --
 ALTER TABLE `tbl_files`
   MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_galeri`
+-- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
-  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_guru`
+-- AUTO_INCREMENT for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
-  MODIFY `guru_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `guru_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_inbox`
+-- AUTO_INCREMENT for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
-  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_kategori`
+-- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
   MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_kelas`
+-- AUTO_INCREMENT for table `tbl_kelas`
 --
 ALTER TABLE `tbl_kelas`
   MODIFY `kelas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_komentar`
+-- AUTO_INCREMENT for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
-  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengguna`
+-- AUTO_INCREMENT for table `tbl_pengguna`
 --
 ALTER TABLE `tbl_pengguna`
   MODIFY `pengguna_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengumuman`
+-- AUTO_INCREMENT for table `tbl_pengumuman`
 --
 ALTER TABLE `tbl_pengumuman`
   MODIFY `pengumuman_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_pengunjung`
+-- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_siswa`
+-- AUTO_INCREMENT for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
-  MODIFY `siswa_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `siswa_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_tulisan`
+-- AUTO_INCREMENT for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
   MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;

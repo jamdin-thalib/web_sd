@@ -79,8 +79,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url(''); ?>">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo site_url('about'); ?>">Profil</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo site_url('sambutan'); ?>">Sambutan</a>
+                            <a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
+                            <a class="dropdown-item" href="<?php echo site_url('struktur'); ?>">Struktur</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url('galeri'); ?>">Galeri</a>
@@ -142,18 +149,6 @@
     <section class="section-about">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="about-img-box">
-                        <img src="<?php echo base_url() . 'assets/img/bus.jpg' ?>" class="img-fluid">
-                    </div>
-                    <div class="sinse-box">
-                        <h3 class="sinse-title">Sekolah Dasar
-                            <span></span>
-                            <br> 1 Busato
-                        </h3>
-                        <!-- <p>Art & Creative</p> -->
-                    </div>
-                </div>
                 <div class="col-md-12 section-t8">
                     <div class="row">
                         <div class="col-md-6 col-lg-5">

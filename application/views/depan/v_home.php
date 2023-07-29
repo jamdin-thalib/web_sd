@@ -61,7 +61,7 @@
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-b">Cari</button>
                     </div>
-                </div>
+                </div>l
             </form>
         </div>
     </div>
@@ -84,8 +84,15 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="<?php echo site_url(''); ?>">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo site_url('about'); ?>">Profil</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo site_url('sambutan'); ?>">Sambutan</a>
+                            <a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
+                            <a class="dropdown-item" href="<?php echo site_url('struktur'); ?>">Struktur</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url('galeri'); ?>">Galeri</a>
