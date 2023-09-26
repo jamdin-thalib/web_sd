@@ -146,49 +146,67 @@
     <!--//End Style 2-->
     <section class="our-teachers">
         <div class="container">
-            <label for="inputUserName" class="col-sm-4 control-label">Rombongan Belajar</label>
+            <!-- <label for="inputUserName" class="col-sm-4 control-label">Rombongan Belajar</label>
             <div class="col-sm-7">
                 <select name="xkelas" class="form-control" required>
                     <option value="">-Pilih Kelas-</option>
-                    <?php
-                    foreach ($data->result_array() as $row) {
-                        $id_kelas = $row['kelas_id'];
-                        $nm_kelas = $row['kelas_nama'];
+                    <?//php
+                    //foreach ($data->result_array() as $row) {
+                        //$id_kelas = $row['kelas_id'];
+                        //$nm_kelas = $row['kelas_nama'];
                     ?>
-                        <option value="<?php echo $id_kelas; ?>"><?php echo $nm_kelas; ?></option>
-                    <?php } ?>
+                        <option value="<?//php echo $id_kelas; ?>"><?//php echo $nm_kelas; ?></option>
+                    <?//php } ?>
                 </select>
-            </div>
-            <div class="row">
-                <?php foreach ($data->result() as $row) : ?>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="admission_insruction">
-                            <?php if (empty($row->siswa_photo)) : ?>
-                                <img src="<?php echo base_url() . 'assets/images/blank.png'; ?>" class="img-fluid" alt="#">
-                            <?php else : ?>
-                                <img src="<?php echo base_url() . 'assets/images/' . $row->siswa_photo; ?>" class="img-fluid" alt="#">
-                            <?php endif; ?>
-                            <p class="text-center mt-3"><span><?php echo $row->siswa_nama; ?></span>
-                                <br>
-                                <?php echo $row->kelas_nama; ?>
-                            </p>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <!-- End row -->
-            <nav><?php echo $page; ?></nav>
-        </div>
-
-        <!-- ============================================ -->
-        <!--  -->
-            <!-- ============================================ -->
-
+            </div> -->
         </div>
     </section>
 
 
     <!--//End Style 2 -->
+
+    <section class="contact" style="margin-bottom:50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="display">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>NISN</th>
+                                    <th>Nama Siswa</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Kelas</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $no = 1;
+                                foreach ($data->result() as $row) :
+                                ?>
+                                    <tr>
+                                        <td><?php echo $no++; ?></td>
+                                        <td><?php echo $row->siswa_nis; ?></td>
+                                        <td><?php echo $row->siswa_nama; ?></td>
+                                        <td><?php echo $row->siswa_jenkel; ?></td>
+                                        <td><?php echo $row->kelas_nama; ?></td>
+                                        <!-- <td style="text-align:right;"><a href="<? //php echo base_url() . 'assets/images/' . $row->siswa_photo; 
+                                                                                    ?>" class="btn btn-success">View</a></td> -->
+                                        <!-- <td><? //php echo $row->file_oleh; 
+                                                    ?></td> -->
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <nav><?php echo $page; ?></nav>
+            </div
+        </div>
+    </section>
+
 
 
 

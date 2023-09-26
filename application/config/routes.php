@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -57,3 +58,10 @@ $route['artikel/(:any)'] = 'blog/detail/$1';
 $route['404_override'] = 'Custom404';
 $route['500_override'] = 'Custom404';
 $route['translate_uri_dashes'] = FALSE;
+
+
+define('__ROOT__', dirname(dirname(__FILE__)));
+
+require_once(__ROOT__.'/config.php');
+
+?>
