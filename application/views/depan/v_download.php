@@ -70,7 +70,7 @@
 				<span></span>
 				<span></span>
 			</button>
-			<a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b>SDN 1 BUSATO</span></a>
+			<a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b><img src="<?php echo base_url() . 'assets/img/apple-touch-icon.png' ?>" alt="" width="25px"> SDN 11 Pinogaluman</span></a>
 			<button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
 				<span class="fa fa-search" aria-hidden="true"></span>
 			</button>
@@ -190,12 +190,12 @@
 					<div class="widget-a">
 						<div class="w-header-a">
 							<img src="<?php echo base_url() . 'assets/img/sd.png' ?>" class="img-fluid" style="float: left; margin-right: 10px; max-width: 20%;">
-							<h3 class="w-title-a text-brand">Sekolah Dasar Negeri 1 Busato</h3></br>
+							<h3 class="w-title-a text-brand">SDN 11 Pinogaluman</h3></br>
 
 						</div>
 						<div class="w-body-a">
 							<p class="w-text-a color-text-a">
-								Jln. Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
+								Jln. Bendungan Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
 							</p>
 						</div>
 						<div class="w-footer-a">
@@ -221,8 +221,15 @@
 									<li class="item-list-a">
 										<i class="fa fa-angle-right"></i> <a href="<?php echo site_url(''); ?>">Home</a>
 									</li>
-									<li class="item-list-a">
-										<i class="fa fa-angle-right"></i> <a href="<?php echo site_url('about'); ?>">Profil</a>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Profil
+										</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="<?php echo site_url('about'); ?>">Sambutan</a>
+											<a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
+											<a class="dropdown-item" href="<?php echo site_url(''); ?>">Struktur</a>
+										</div>
 									</li>
 									<li class="item-list-a">
 										<i class="fa fa-angle-right"></i> <a href="<?php echo site_url('galeri'); ?>">Galeri</a>
@@ -312,7 +319,7 @@
 					<div class="copyright-footer">
 						<p class="copyright color-text-a">
 							&copy; Modified by
-							<span class="color-a"><a href="">JD-Com@Cru--APTIKA</a></span> All
+							<span class="color-a"><a href="">SDN 11 Pinogaluman</a></span> All
 							Rights Reserved.
 						</p>
 					</div>

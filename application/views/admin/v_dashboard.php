@@ -29,14 +29,14 @@ $jum_pesan = $query->num_rows();
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/dist/css/skins/_all-skins.min.css' ?>">
     <?php
-	/* Mengambil query report*/
-	foreach ($visitor as $result) {
-		$bulan[] = $result->tgl; //ambil bulan
-		$value[] = (float) $result->jumlah; //ambil nilai
-	}
-	/* end mengambil query*/
+    /* Mengambil query report*/
+    foreach ($visitor as $result) {
+        $bulan[] = $result->tgl; //ambil bulan
+        $value[] = (float) $result->jumlah; //ambil nilai
+    }
+    /* end mengambil query*/
 
-	?>
+    ?>
 
 </head>
 
@@ -45,8 +45,8 @@ $jum_pesan = $query->num_rows();
 
         <!--Header-->
         <?php
-		$this->load->view('admin/v_header');
-		?>
+        $this->load->view('admin/v_header');
+        ?>
 
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
@@ -207,13 +207,13 @@ $jum_pesan = $query->num_rows();
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="info-box">
-                            <span class="info-box-icon bg-aqua"><i class="fa fa-chrome"></i></span>
+                            <span class="info-box-icon bg-aqua"><i class="fa fa-book"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Chrome'");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_tulisan WHERE tulisan_judul='tulisan_id'");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
-                                <span class="info-box-text">Chrome</span>
+                                <span class="info-box-text">Berita</span>
                                 <span class="info-box-number"><?php echo $jml; ?></span>
                             </div>
                             <!-- /.info-box-content -->
@@ -223,14 +223,14 @@ $jum_pesan = $query->num_rows();
                     <!-- /.col -->
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="info-box">
-                            <span class="info-box-icon bg-red"><i class="fa fa-firefox"></i></span>
+                            <span class="info-box-icon bg-red"><i class="fa fa-user"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Firefox' OR pengunjung_perangkat='Mozilla'");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Firefox' OR pengunjung_perangkat='Mozilla'");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
-                                <span class="info-box-text">Mozilla Firefox</span>
-                                <span class="info-box-number"><?php echo $jml; ?></span>
+                                <span class="info-box-text">Guru</span>
+                                <span class="info-box-number"><?php echo $tot_guru; ?></span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -243,14 +243,14 @@ $jum_pesan = $query->num_rows();
 
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="info-box">
-                            <span class="info-box-icon bg-green"><i class="fa fa-bug"></i></span>
+                            <span class="info-box-icon bg-green"><i class="fa fa-users"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Googlebot'");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Googlebot'");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
-                                <span class="info-box-text">Googlebot</span>
-                                <span class="info-box-number"><?php echo $jml; ?></span>
+                                <span class="info-box-text">Siswa</span>
+                                <span class="info-box-number"><?php echo $tot_siswa; ?></span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -259,13 +259,13 @@ $jum_pesan = $query->num_rows();
                     <!-- /.col -->
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="fa fa-opera"></i></span>
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-gear"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Opera'");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Opera'");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
-                                <span class="info-box-text">Opera</span>
+                                <span class="info-box-text">Kegiatan</span>
                                 <span class="info-box-number"><?php echo $jml; ?></span>
                             </div>
                             <!-- /.info-box-content -->
@@ -320,16 +320,17 @@ $jum_pesan = $query->num_rows();
 
                                 <table class="table">
                                     <?php
-									$query = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC");
-									foreach ($query->result_array() as $i) :
-										$tulisan_id = $i['tulisan_id'];
-										$tulisan_judul = $i['tulisan_judul'];
-										$tulisan_views = $i['tulisan_views'];
-										?>
-                                    <tr>
-                                        <td><?php echo $tulisan_judul; ?></td>
-                                        <td><?php echo $tulisan_views . ' Views'; ?></td>
-                                    </tr>
+                                    $query = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC");
+                                    foreach ($query->result_array() as $i) :
+                                        $tulisan_id = $i['tulisan_id'];
+                                        $tulisan_judul = $i['tulisan_judul'];
+                                        $tulisan_views = $i['tulisan_views'];
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $tulisan_judul; ?></td>
+                                            <td><?php echo $tulisan_judul; ?></td>
+                                            <td><?php echo $tulisan_views . ' Views'; ?></td>
+                                        </tr>
                                     <?php endforeach; ?>
                                 </table>
                             </div>
@@ -347,9 +348,9 @@ $jum_pesan = $query->num_rows();
                         <div class="info-box bg-yellow">
                             <span class="info-box-icon"><i class="fa fa-safari"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Safari'");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Safari'");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
                                 <span class="info-box-text">Safari</span>
                                 <span class="info-box-number"><?php echo number_format($jml); ?></span>
@@ -367,9 +368,9 @@ $jum_pesan = $query->num_rows();
                         <div class="info-box bg-green">
                             <span class="info-box-icon"><i class="fa fa-globe"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Other' OR pengunjung_perangkat='Internet Explorer'");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Other' OR pengunjung_perangkat='Internet Explorer'");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
                                 <span class="info-box-text">Lainnya</span>
                                 <span class="info-box-number"><?php echo number_format($jml); ?></span>
@@ -387,9 +388,9 @@ $jum_pesan = $query->num_rows();
                         <div class="info-box bg-red">
                             <span class="info-box-icon"><i class="fa fa-users"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE DATE_FORMAT(pengunjung_tanggal,'%m%y')=DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH),'%m%y')");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE DATE_FORMAT(pengunjung_tanggal,'%m%y')=DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH),'%m%y')");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
                                 <span class="info-box-text">Pengunjung Bulan Lalu</span>
                                 <span class="info-box-number"><?php echo number_format($jml); ?></span>
@@ -407,9 +408,9 @@ $jum_pesan = $query->num_rows();
                         <div class="info-box bg-aqua">
                             <span class="info-box-icon"><i class="fa fa-users"></i></span>
                             <?php
-							$query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE DATE_FORMAT(pengunjung_tanggal,'%m%y')=DATE_FORMAT(CURDATE(),'%m%y')");
-							$jml = $query->num_rows();
-							?>
+                            $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE DATE_FORMAT(pengunjung_tanggal,'%m%y')=DATE_FORMAT(CURDATE(),'%m%y')");
+                            $jml = $query->num_rows();
+                            ?>
                             <div class="info-box-content">
                                 <span class="info-box-text">Pengunjung Bulan Ini</span>
                                 <span class="info-box-number"><?php echo number_format($jml); ?></span>
@@ -441,7 +442,7 @@ $jum_pesan = $query->num_rows();
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0
             </div>
-            <strong>Copyright &copy; 2019 <a href="http://bagus-erwanto.epizy.com">Bagus Erwanto</a>.</strong> All
+            <strong>Copyright &copy; 2024 <a href="http://bagus-erwanto.epizy.com">SDN 11 Pinogaluman</a>.</strong> All
             rights reserved.
         </footer>
 
@@ -471,50 +472,48 @@ $jum_pesan = $query->num_rows();
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url() . 'assets/dist/js/demo.js' ?>"></script>
 
-   
-	<script>
-	
-	var lineChartData = {
-	labels : <?php echo json_encode($bulan);?>,
-	datasets :  [
 
-		{
-			fillColor: "rgba(60,141,188,0.9)",
-			strokeColor: "rgba(60,141,188,0.8)",
-			pointColor: "#3b8bba",
-			pointStrokeColor: "#fff",
-			pointHighlightFill: "#fff",
-			pointHighlightStroke: "rgba(152,235,239,1)",
-			data : <?php echo json_encode($value);?>
-		}
+    <script>
+        var lineChartData = {
+            labels: <?php echo json_encode($bulan); ?>,
+            datasets: [
 
-				]
+                {
+                    fillColor: "rgba(60,141,188,0.9)",
+                    strokeColor: "rgba(60,141,188,0.8)",
+                    pointColor: "#3b8bba",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(152,235,239,1)",
+                    data: <?php echo json_encode($value); ?>
+                }
 
-			}
+            ]
 
-		var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+        }
 
-		var canvas = new Chart(myLine).Line(lineChartData, {
-		scaleShowGridLines : true,
-		scaleGridLineColor : "rgba(0,0,0,.005)",
-		scaleGridLineWidth : 0,
-		scaleShowHorizontalLines: true,
-		scaleShowVerticalLines: true,
-		bezierCurve : true,
-		bezierCurveTension : 0.4,
-		pointDot : true,
-		pointDotRadius : 4,
-		pointDotStrokeWidth : 1,
-		pointHitDetectionRadius : 2,
-		datasetStroke : true,
-		tooltipCornerRadius: 2,
-		datasetStrokeWidth : 2,
-		datasetFill : true,
-		legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-		responsive: true
-		});
+        var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
 
-</script>
+        var canvas = new Chart(myLine).Line(lineChartData, {
+            scaleShowGridLines: true,
+            scaleGridLineColor: "rgba(0,0,0,.005)",
+            scaleGridLineWidth: 0,
+            scaleShowHorizontalLines: true,
+            scaleShowVerticalLines: true,
+            bezierCurve: true,
+            bezierCurveTension: 0.4,
+            pointDot: true,
+            pointDotRadius: 4,
+            pointDotStrokeWidth: 1,
+            pointHitDetectionRadius: 2,
+            datasetStroke: true,
+            tooltipCornerRadius: 2,
+            datasetStrokeWidth: 2,
+            datasetFill: true,
+            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+            responsive: true
+        });
+    </script>
 
 
 </body>
