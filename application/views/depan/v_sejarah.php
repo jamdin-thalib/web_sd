@@ -70,7 +70,11 @@
                 <span></span>
                 <span></span>
             </button>
+<<<<<<< HEAD
             <a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b>SDN 11 Pinogaluman</span></a>
+=======
+            <a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b>SDN 1 BUSATO</span></a>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
             <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
             </button>
@@ -84,7 +88,11 @@
                             Profil
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                             <a class="dropdown-item" href="<?php echo site_url('about'); ?>">Sambutan</a>
+=======
+                            <a class="dropdown-item" href="<?php echo site_url('sambutan'); ?>">Sambutan</a>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                             <a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
                             <a class="dropdown-item" href="<?php echo site_url(''); ?>">Struktur</a>
                         </div>
@@ -151,8 +159,12 @@
             <div class="row">
                 <!-- <div class="col-sm-12">
                     <div class="about-img-box">
+<<<<<<< HEAD
                         <img src="<? //php echo base_url() . 'assets/img/bus.jpg' 
                                     ?>" class="img-fluid">
+=======
+                        <img src="<?//php echo base_url() . 'assets/img/bus.jpg' ?>" class="img-fluid">
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                     </div>
                     <div class="sinse-box">
                         <h3 class="sinse-title">Sekolah Dasar
@@ -160,6 +172,7 @@
                             <br> 1 Busato
                         </h3>
                         <!-- <p>Art & Creative</p> -->
+<<<<<<< HEAD
             </div>
         </div> -->
         <div class="col-md-12 section-t8">
@@ -196,6 +209,45 @@
         </div>
         </div>
         </div>
+=======
+                    </div>
+                </div> -->
+                <div class="col-md-12 section-t8">
+                    <div class="row">
+                        <!-- <div class="col-md-6 col-lg-5">
+                            <img src="<?php echo base_url() . 'assets/img/author-2.jpg' ?>" alt="" style="width: 800px;margin-left: 50px;" class="img-fluid">
+                        </div> -->
+                        <div class="col-lg-2  d-none d-lg-block">
+                            <div class="title-vertical d-flex justify-content-start">
+                                <span>Sejarah Sekolah</span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-8 section-md-t3">
+                            <div class="title-box-d">
+                                <h3 class="title-d">Diangkat
+                                    <span class="color-d">Cerita Sejarah</span> Desa Busato
+                                </h3>
+                            </div>
+                            <p class="color-text-a">
+                                Dibentuk dan beridir sejak tahun 1994 dengan pimpinan pertama adalah,
+                                sehingga kita semua dapat membaktikan segala hal yang kita miliki untuk kemajuan dunia
+                                pendidikan. Apapun bentuk dan sumbangsih yang kita berikan, jika dilandasi niat yang
+                                tulus tanpa memandang imbalan apapun akan menghasilkan mahakarya yang agung untuk bekal
+                                kita dan generasi setelah kita. Pendidikan adalah harga mati untuk menjadi pondasi
+                                bangsa dan negara dalam menghadapi perkembangan zaman.
+                            </p>
+                            <p class="color-text-a">
+                                Hal ini seiring dengan penguasaan teknologi untuk dimanfaatkan sebaik mungkin, sehingga
+                                menciptakan iklim kondusif dalam ranah keilmuan. Dengan konsep yang kontekstual dan
+                                efektif, kami mengejewantahkan nilai-nilai pendidikan yang tertuang dalam visi misi SD
+                                Negeri 1 Busato, sebagai panduan hukum dalam menjabarkan tujuan hakiki pendidikan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
     </section>
     <!--/ About End /-->
 
@@ -210,21 +262,36 @@
                     <div class="widget-a">
                         <div class="w-header-a">
                             <img src="<?php echo base_url() . 'assets/img/sd.png' ?>" class="img-fluid" style="float: left; margin-right: 10px; max-width: 20%;">
+<<<<<<< HEAD
                             <h3 class="w-title-a text-brand">SDN 11 Pinogaluman</h3></br>
+=======
+                            <h3 class="w-title-a text-brand">Sekolah Dasar Negeri 1 Busato</h3></br>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
 
                         </div>
                         <div class="w-body-a">
                             <p class="w-text-a color-text-a">
+<<<<<<< HEAD
                                 Jln. Bendungan Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
+=======
+                                Jln. Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                             </p>
                         </div>
                         <div class="w-footer-a">
                             <ul class="list-unstyled">
                                 <li class="color-a">
+<<<<<<< HEAD
                                     <span class="color-text-a">Phone .</span>
                                 </li>
                                 <li class="color-a">
                                     <span class="color-text-a">Email .</span>
+=======
+                                    <span class="color-text-a">Phone .</span> +54 356 945234
+                                </li>
+                                <li class="color-a">
+                                    <span class="color-text-a">Email .</span> contact@example.com
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                                 </li>
                             </ul>
                         </div>
@@ -332,7 +399,11 @@
                     <div class="copyright-footer">
                         <p class="copyright color-text-a">
                             &copy; Modified by
+<<<<<<< HEAD
                             <span class="color-a"><a href="">SDN 11 Pinogaluman</a></span> All
+=======
+                            <span class="color-a"><a href="">JD-Com@Cru--APTIKA</a></span> All
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                             Rights Reserved.
                         </p>
                     </div>

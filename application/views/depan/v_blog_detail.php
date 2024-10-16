@@ -372,7 +372,11 @@
                                             Profil
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                                             <a class="dropdown-item" href="<?php echo site_url('about'); ?>">Sambutan</a>
+=======
+                                            <a class="dropdown-item" href="<?php echo site_url('sambutan'); ?>">Sambutan</a>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                                             <a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
                                             <a class="dropdown-item" href="<?php echo site_url(''); ?>">Struktur</a>
                                         </div>

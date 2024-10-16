@@ -70,7 +70,11 @@
                 <span></span>
                 <span></span>
             </button>
+<<<<<<< HEAD
             <a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b><img src="<?php echo base_url() . 'assets/img/apple-touch-icon.png' ?>" alt="" width="25px"> SDN 11 Pinogaluman</span></a>
+=======
+            <a class="navbar-brand-nav text-brand" href="<?php echo site_url(''); ?>" color-b>SDN 1 BUSATO</span></a>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
             <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
             </button>
@@ -84,7 +88,11 @@
                             Profil
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                             <a class="dropdown-item" href="<?php echo site_url('about'); ?>">Sambutan</a>
+=======
+                            <a class="dropdown-item" href="<?php echo site_url('sambutan'); ?>">Sambutan</a>
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                             <a class="dropdown-item" href="<?php echo site_url('sejarah'); ?>">Sejarah</a>
                             <a class="dropdown-item" href="<?php echo site_url('struktur'); ?>">Struktur</a>
                         </div>
@@ -172,10 +180,13 @@
         </div>
     </section>
     <!--/ About End /-->
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
     <!--/ footer Star /-->
     <section class="section-footer">
         <div class="container">
@@ -184,21 +195,36 @@
                     <div class="widget-a">
                         <div class="w-header-a">
                             <img src="<?php echo base_url() . 'assets/img/sd.png' ?>" class="img-fluid" style="float: left; margin-right: 10px; max-width: 20%;">
+<<<<<<< HEAD
                             <h3 class="w-title-a text-brand">SDN 11 Pinogaluman</h3></br>
 
                         </div>
                         <div class="w-body-a">
                             <p class="w-text-a color-text-a">
                                 Jln. Bendungan Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
+=======
+                            <h3 class="w-title-a text-brand">Sekolah Dasar Negeri 1 Busato</h3></br>
+                        </div>
+                        <div class="w-body-a">
+                            <p class="w-text-a color-text-a">
+                                Jln. Desa Busato, Kec. Pinogaluman, Kabupaten Bolaang Mongondow Utara, Sulawesi Utara 95765
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                             </p>
                         </div>
                         <div class="w-footer-a">
                             <ul class="list-unstyled">
                                 <li class="color-a">
+<<<<<<< HEAD
                                     <span class="color-text-a">Phone .</span>
                                 </li>
                                 <li class="color-a">
                                     <span class="color-text-a">Email .</span>
+=======
+                                    <span class="color-text-a">Phone .</span> +54 356 945234
+                                </li>
+                                <li class="color-a">
+                                    <span class="color-text-a">Email .</span> contact@example.com
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                                 </li>
                             </ul>
                         </div>
@@ -306,7 +332,11 @@
                     <div class="copyright-footer">
                         <p class="copyright color-text-a">
                             &copy; Modified by
+<<<<<<< HEAD
                             <span class="color-a"><a href="">SDN 11 Pinogaluman</a></span> All
+=======
+                            <span class="color-a"><a href="">JD-Com@Cru--APTIKA</a></span> All
+>>>>>>> 01bd0a42beba455f21806a9a5ff6fd3bf33450f0
                             Rights Reserved.
                         </p>
                     </div>
