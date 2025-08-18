@@ -28,9 +28,9 @@
         <!-- /.login-logo -->
         <div class="login-box-body">
             <p class="login-box-msg"> <img style="width:100px;" src="<?php echo base_url() . 'assets/img/sd.png' ?>">
-                <p
-                    style="font-size: 20px; margin-top: 0; margin-bottom: 20px;width: 100%;height: 50px;text-align: center; font-weight: bold;">
-                    ADMIN LOGIN</p>
+            <p
+                style="font-size: 20px; margin-top: 0; margin-bottom: 20px;width: 100%;height: 50px;text-align: center; font-weight: bold;">
+                ADMIN LOGIN</p>
             </p>
             <form action="<?php echo site_url() . 'admin/login/auth' ?>" method="post">
                 <div class="form-group has-feedback">
@@ -61,7 +61,7 @@
             <!-- /.social-auth-links -->
             <hr />
             <p>
-                <center>Copyright <?php echo date('Y'); ?> Bagus Erwanto <br> All Right Reserved</center>
+                <center>Copyright <?php echo date('Y'); ?> SDN 11 Pinogaluman <br> All Right Reserved</center>
             </p>
         </div>
         <!-- /.login-box-body -->
@@ -75,13 +75,13 @@
     <!-- iCheck -->
     <script src="<?php echo base_url() . 'assets/plugins/iCheck/icheck.min.js' ?>"></script>
     <script>
-    $(function() {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
+        $(function() {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
         });
-    });
     </script>
 </body>
 

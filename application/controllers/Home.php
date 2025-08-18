@@ -1,7 +1,10 @@
 <?php
 class Home extends CI_Controller
 {
+	// public function open($save_path, $name)
+
 	function __construct()
+
 	{
 		parent::__construct();
 		$this->load->model('m_tulisan');
@@ -12,6 +15,7 @@ class Home extends CI_Controller
 		$this->load->model('m_pengunjung');
 		$this->m_pengunjung->count_visitor();
 	}
+
 	function index()
 	{
 		$x['berita'] = $this->m_tulisan->get_berita_home();
@@ -21,6 +25,7 @@ class Home extends CI_Controller
 		$x['tot_siswa'] = $this->db->get('tbl_siswa')->num_rows();
 		$x['tot_files'] = $this->db->get('tbl_files')->num_rows();
 		$x['tot_agenda'] = $this->db->get('tbl_agenda')->num_rows();
+
 		$this->load->view('depan/v_home', $x);
 	}
 }

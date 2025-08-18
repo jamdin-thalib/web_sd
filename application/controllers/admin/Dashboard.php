@@ -12,6 +12,8 @@ class Dashboard extends CI_Controller
 	}
 	function index()
 	{
+		$x['tot_guru'] = $this->db->get('tbl_guru')->num_rows();
+		$x['tot_siswa'] = $this->db->get('tbl_siswa')->num_rows();
 		if ($this->session->userdata('akses') == '1') {
 			$x['visitor'] = $this->m_pengunjung->statistik_pengujung();
 			$this->load->view('admin/v_dashboard', $x);

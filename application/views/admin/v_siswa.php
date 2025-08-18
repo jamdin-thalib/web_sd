@@ -211,14 +211,14 @@
           				<?php
           					$no=0;
           					foreach ($data->result_array() as $i) :
-          					   $no++;
-          					   $id=$i['siswa_id'];
-          					   $nis=$i['siswa_nis'];
-          					   $nama=$i['siswa_nama'];
-          					   $jenkel=$i['siswa_jenkel'];
-          					   $kelas_id=$i['siswa_kelas_id'];
-                       $kelas_nama=$i['kelas_nama'];
-                       $photo=$i['siswa_photo'];
+                      $no++;
+                      $id=$i['siswa_id'];
+                      $nis=$i['siswa_nis'];
+                      $nama=$i['siswa_nama'];
+                      $jenkel=$i['siswa_jenkel'];
+                      $kelas_id=$i['siswa_kelas_id'];
+                      $kelas_nama=$i['kelas_nama'];
+                      $photo=$i['siswa_photo'];
 
                     ?>
                 <tr>
@@ -259,7 +259,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2019 <a href="http://bagus-erwanto.epizy.com">Bagus Erwanto</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2019 <a href="">Bagus Erwanto</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
